@@ -4,24 +4,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "ChaosSwiftUI",
+    name: "ChaosNet",
+    platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "ChaosSwiftUI",
-            targets: ["ChaosSwiftUI"]
+            name: "ChaosNet",
+            targets: ["ChaosNet"],
         ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", .upToNextMajor(from: "0.65.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "ChaosSwiftUI"
-        ),
-        .testTarget(
-            name: "ChaosSwiftUITests",
-            dependencies: ["ChaosSwiftUI"]
+            name: "ChaosNet",
+            swiftSettings: [.enableUpcomingFeature("MemberImportVisibility")],
+            plugins: [
+                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins"),
+            ],
         ),
     ],
-    swiftLanguageModes: [.v6]
+    swiftLanguageModes: [.v6],
 )

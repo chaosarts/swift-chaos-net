@@ -1,0 +1,4 @@
+--allman false
+--extension-acl on-declarations
+--urlMacro "#URL,URLFoundation"
+--disable wrapMultilineStatementBraces
