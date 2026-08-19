@@ -1,5 +1,5 @@
 //
-//  Copyright © 2025 Chrono24 GmbH. All rights reserved.
+//  Created by Fu Lam Diep on 06.09.24.
 //
 
 public enum ApiErrorPolicy: Sendable {

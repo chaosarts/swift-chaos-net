@@ -1,10 +1,10 @@
 //
-//  Copyright © 2025 Chrono24 GmbH. All rights reserved.
+//  Created by Fu Lam Diep on 06.09.24.
 //
 
 import Foundation
 
-/// A middleware layer between an API definition (e.g. `chrono24.com/api/`) and the transport layer of the
+/// A middleware layer between an API definition and the transport layer of the
 /// application.
 ///
 /// `ApiClient` handles concerns that belong to neither the transport engine nor the API definition itself:
